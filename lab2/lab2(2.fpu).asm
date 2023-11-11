@@ -1,8 +1,9 @@
-%include "/home/mrvoker_/Документы/asm/lab2/io64_float.inc"
+;%include "/home/mrvoker_/Документы/asm/lab2/io64_float.inc"
 
 ;y = a * sin(b * x) + cos(c * x)
 ;b x * sin a *
 ;c x * cos result +
+
 
 section .data
     a: dd 8.0
@@ -14,7 +15,7 @@ section .data
 global main
 section .text
 main:
-    mov rbp, rsp; for correct debugging (ok)
+    mov rbp, rsp; for correct debugging (lol)
     fld dword[b]
     fld dword[x]
     fmul
@@ -28,7 +29,7 @@ main:
     fcos
     fld dword[result]
     fadd
-    fstp dword[result]
+    fstp dword[result]      
     jmp exit
     
 exit:

@@ -1,4 +1,4 @@
-%include "/home/mrvoker_/Документы/asm/lab2/io64_float.inc"
+;%include "/home/mrvoker_/Документы/asm/lab2/io64_float.inc"
 
 ;y = a * sin(b * x) + cos(c * x)
 ;b x * sin a *

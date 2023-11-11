@@ -1,4 +1,4 @@
-%include "/home/mrvoker_/Документы/asm/lab2/io64_float.inc"
+%include "io64.inc"
 
 ; ===calc_cosh===
 ; cosh(b) = (e ^ b - e ^ (-b)) / 2

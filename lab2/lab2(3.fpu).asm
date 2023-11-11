@@ -1,4 +1,4 @@
-%include "/home/mrvoker_/Документы/asm/lab2/io64_float.inc"
+;%include "/home/mrvoker_/Документы/asm/lab2/io64_float.inc"
 
 ; ===calc_arccos===
 ; arccos(b) = arctg(sqrt( (1-b) / (1+b) ))
@@ -38,8 +38,9 @@ main:
     jmp calc_example
     
 calc_example:
-    fld dword[result]
-    fldl2e
+    fld dword[result] ; показатель степени
+    fldl2e            ; основание степени    
+    
     fyl2x         ; Стек FPU теперь содержит: ST(0)=y*log2(x)
     fld st0       ; Создаем еще одну копию z
     frndint       ; Округляем ST(0)=round(z)         | ST(1)=z
@@ -49,9 +50,11 @@ calc_example:
     fld1          ; ST(0)=1                          | ST(1)=2**(z-round(z))-1  | ST(2)=round(z)
     faddp st1,st0 ; ST(0)=2**(z-round(z))            | ST(1)=round(z)
     fscale
+    
     fld dword[a]
     fsub
-    fstp dword[result]   
+    fstp dword[result] 
+    jmp exit  
     
 exit:
     xor eax, eax

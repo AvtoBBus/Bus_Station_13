@@ -1,4 +1,4 @@
-%include "/home/mrvoker_/Документы/asm/lab2/io64_float.inc"
+;%include "/home/mrvoker_/Документы/asm/lab2/io64_float.inc"
 
 ; ===calc_arccos===
 ; arccos(b) = arctg(sqrt( (1-b) / (1+b) ))
