@@ -1,0 +1,10 @@
+easy.cpp.o    access1
+easy.cpp.o    access2
+easy.cpp.o    access3
+easy.cpp.o    access4
+easy.cpp.o    access5
+easy.cpp.o    access6
+easy.cpp.o    access7
+easy.cpp.o    access8
+easy.cpp.o    access9
+easy.cpp.o    access0
